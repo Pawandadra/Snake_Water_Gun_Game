@@ -1,15 +1,17 @@
 body {
-    background-image: url("bg2.jpg");
-    background-size: cover;
+    background: url("bg2.jpg") repeat center/cover;
+    height: 100vh;
+    width: 100vw;
     font-family: "Playwrite DE Grund", cursive;
     text-align: center;
-    font-size: 40px;
+    font-size: 2rem;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 header{
     margin: auto;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 h1 {
@@ -20,16 +22,7 @@ h1 {
 #title1 {
     color: rgba(0, 0, 0, 0.315);
     margin-top: 0;
-}
-
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-input[type="number"] {
-    -moz-appearance: textfield;
+    margin-bottom: 0;
 }
 
 #userInput {
@@ -52,8 +45,8 @@ input[type="number"] {
 }
 
 #output{
-    margin: 50px;
-    font-size: 30px;
+    margin: 30px;
+    font-size: 1.5rem;
 }
 
 .btn{
@@ -73,17 +66,27 @@ input[type="number"] {
 }
 
 #clue{
-    margin: 0px;
+    margin: 0;
     font-size: large;
 }
-#rules{
-    font-size: medium;
-    text-align: justify;
-    color: rgb(65, 60, 60);
-    border : 2px solid rgba(65, 60, 60, 0.397);
-    width: 300px;
-    border-radius: 4px;
-    position: fixed;
-    top: center;
-    right: 5px;
+
+@media only screen and (max-width: 600px){
+    body {
+        font-size: 1.3rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    #userInput {
+        width: 270px;
+    }
+    
+    #output{
+        font-size: 1.3rem;
+    }
+    #clue{
+        font-size: small;
+    }   
 }
